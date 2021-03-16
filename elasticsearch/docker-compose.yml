@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  elasticsearch6x:
+    build:
+      context: /home/mango/docker/elasticsearch
+      dockerfile: Dockerfile
+    ports:
+      - 127.0.0.1:9200:9200
+    environment:
+          - ES_JAVA_OPTS=-Xmx2g -Xms2g
+    ulimits:
+        nofile:
+            soft: 65536
+            hard: 65536
