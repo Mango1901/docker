@@ -1,8 +1,8 @@
-version: '3.7'
+version: '3.3'
 services:
   elasticsearch6x:
     build:
-      context: /home/mango/docker/elasticsearch
+      context: /home/mango/public_html/docker/elasticsearch
       dockerfile: Dockerfile
     ports:
       - 127.0.0.1:9200:9200
